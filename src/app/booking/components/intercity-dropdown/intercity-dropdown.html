@@ -1,0 +1,11 @@
+<div class="intercity-dropdown-container">
+  <div class="trip-type-selector">
+    <button type="button" [class.active]="tripType === 'one-way'" (click)="selectTripType('one-way')">One-way</button>
+    <button type="button" [class.active]="tripType === 'return'" (click)="selectTripType('return')">Return</button>
+  </div>
+  <label for="city-select">Select Destination City</label>
+  <select id="city-select" [(ngModel)]="selectedCity">
+    <option value="" disabled>Choose a city</option>
+    <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+  </select>
+</div>

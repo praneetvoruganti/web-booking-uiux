@@ -1,0 +1,16 @@
+<div class="booking-container">
+  <h1 class="main-title">Book a Ride</h1>
+  <app-ride-type-selector (rideTypeSelected)="onRideTypeSelected($event)"></app-ride-type-selector>
+
+  <!-- Conditional Components based on Ride Type -->
+  <app-airport-transfer-selector *ngIf="selectedRideType === 'Schedule'"></app-airport-transfer-selector>
+  <app-package-slider *ngIf="selectedRideType === 'Package'"></app-package-slider>
+  <app-intercity-dropdown *ngIf="selectedRideType === 'Intercity'" (tripTypeChanged)="onIntercityTripTypeChanged($event)"></app-intercity-dropdown>
+
+  <app-date-time-picker [rideType]="selectedRideType" [tripType]="intercityTripType"></app-date-time-picker>
+  <app-location-picker></app-location-picker>
+  <app-vehicle-selector></app-vehicle-selector>
+  <app-customer-information></app-customer-information>
+  <app-booking-info></app-booking-info>
+  <app-search-button></app-search-button>
+</div>

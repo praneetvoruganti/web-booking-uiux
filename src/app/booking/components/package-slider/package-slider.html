@@ -1,0 +1,8 @@
+<div class="package-slider-container">
+  <!-- <label for="package-range">Select Package: <span class="sr-only">{{ selectedPackageDescription }}</span></label> -->
+  <input type="range" id="package-range" min="0" [max]="packages.length - 1" step="1" [value]="selectedPackageIndex" (input)="onPackageChange($event)">
+  <div class="package-details" aria-hidden="true">
+    <span *ngFor="let package of packages">{{ package }}</span>
+  </div>
+  <span class="sr-only" aria-live="polite">Selected package: {{ selectedPackageDescription }}</span>
+</div>

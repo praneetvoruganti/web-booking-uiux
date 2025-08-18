@@ -1,0 +1,21 @@
+<div class="vehicle-selector-container">
+  <label>Select Vehicle</label>
+  <div class="vehicle-options">
+    <div class="vehicle-option" [class.active]="selectedVehicle === 'Mini'" (click)="selectVehicle('Mini')">
+      <span class="vehicle-name">Mini</span>
+      <span class="vehicle-price">423</span>
+    </div>
+    <div class="vehicle-option" [class.active]="selectedVehicle === 'Sedan'" (click)="selectVehicle('Sedan')">
+      <span class="vehicle-name">Sedan</span>
+      <span class="vehicle-price">485</span>
+    </div>
+    <div class="vehicle-option" [class.active]="selectedVehicle === 'SUV'" (click)="selectVehicle('SUV')">
+      <span class="vehicle-name">SUV</span>
+      <span class="vehicle-price">600</span>
+    </div>
+    <div class="vehicle-option" [class.active]="selectedVehicle === 'SUV+'" (click)="selectVehicle('SUV+')">
+      <span class="vehicle-name">SUV+</span>
+      <span class="vehicle-price">750</span>
+    </div>
+  </div>
+</div>

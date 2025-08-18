@@ -1,0 +1,4 @@
+<div class="airport-transfer-selector-container">
+  <button [class.active]="selectedTransfer === 'To Airport'" (click)="selectTransfer('To Airport')">To Airport</button>
+  <button [class.active]="selectedTransfer === 'From Airport'" (click)="selectTransfer('From Airport')">From Airport</button>
+</div>

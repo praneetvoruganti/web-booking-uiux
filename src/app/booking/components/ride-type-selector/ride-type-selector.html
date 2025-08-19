@@ -2,7 +2,7 @@
   <label>Select Ride Type</label>
   <div class="ride-type-buttons">
     <button [class.active]="selectedRideType === 'Schedule'" (click)="selectRideType('Schedule')">Schedule</button>
-    <button [class.active]="selectedRideType === 'Package'" (click)="selectRideType('Package')">Package</button>
-    <button [class.active]="selectedRideType === 'Intercity'" (click)="selectRideType('Intercity')">Intercity</button>
+    <button [class.active]="selectedRideType === 'Package'" (click)="selectRideType('Package')">Hourly</button>
+    <button [class.active]="selectedRideType === 'Intercity'" (click)="selectRideType('Intercity')">City2City</button>
   </div>
 </div>
